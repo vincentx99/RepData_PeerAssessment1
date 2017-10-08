@@ -89,11 +89,10 @@ pander(Activity.Intervalsteps.summary,caption = "Interval for maximum steps.")
 ```
 
 
---------------------------
- interval   Intervalsteps 
----------- ---------------
-   0835         206.2     
---------------------------
+
+| interval | Intervalsteps |
+|:--------:|:-------------:|
+|   0835   |     206.2     |
 
 Table: Interval for maximum steps.
 

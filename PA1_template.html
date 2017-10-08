@@ -184,12 +184,8 @@ ggplot(data=Activity.Intervalsteps, aes(x=as.numeric(interval), y=Intervalsteps)
 <pre class="r"><code>Activity.Intervalsteps.summary&lt;-Activity.Intervalsteps[Activity.Intervalsteps$Intervalsteps==max(Activity.Intervalsteps$Intervalsteps),]
 
 pander(Activity.Intervalsteps.summary,caption = &quot;Interval for maximum steps.&quot;)</code></pre>
-<table style="width:36%;">
+<table>
 <caption>Interval for maximum steps.</caption>
-<colgroup>
-<col width="15%"></col>
-<col width="20%"></col>
-</colgroup>
 <thead>
 <tr class="header">
 <th align="center">interval</th>
