@@ -50,17 +50,15 @@ Activity.daysteps.summary<-Activity.daysteps%>%
 Activity.daysteps.summary<-as.data.frame(Activity.daysteps.summary)
 
 
-pandoc.table(Activity.daysteps.summary, caption="Summary of daily steps taken.", style="grid")
+pandoc.table(Activity.daysteps.summary, caption="Summary of daily steps taken.", style = 'rmarkdown', split.tables = Inf)
 ```
 
 ```
 ## 
 ## 
-## +-------+--------+
 ## | mean  | median |
-## +=======+========+
+## |:-----:|:------:|
 ## | 10766 | 10765  |
-## +-------+--------+
 ## 
 ## Table: Summary of daily steps taken.
 ```
