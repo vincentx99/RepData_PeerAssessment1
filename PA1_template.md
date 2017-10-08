@@ -50,17 +50,20 @@ Activity.daysteps.summary<-Activity.daysteps%>%
 Activity.daysteps.summary<-as.data.frame(Activity.daysteps.summary)
 
 
-pander(Activity.daysteps.summary, caption="Summary of daily steps taken.")
+pandoc.table(Activity.daysteps.summary, caption="Summary of daily steps taken.", style="grid")
 ```
 
-
-----------------
- mean    median 
-------- --------
- 10766   10765  
-----------------
-
-Table: Summary of daily steps taken.
+```
+## 
+## 
+## +-------+--------+
+## | mean  | median |
+## +=======+========+
+## | 10766 | 10765  |
+## +-------+--------+
+## 
+## Table: Summary of daily steps taken.
+```
 
 ## What is the average daily activity pattern?
 
