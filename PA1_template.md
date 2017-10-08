@@ -1,6 +1,22 @@
 # Reproducible Research: Peer Assessment 1
 
 
+```r
+knitr::opts_chunk$set(echo = TRUE)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+library(RColorBrewer)
+library(reshape2)
+library(kableExtra)
+library(xtable)
+library(pander)
+panderOptions('table.style', 'rmarkdown')
+library(knitr)
+library(rmarkdown)
+library(magrittr)
+```
 
 ## Loading and preprocessing the data
 
@@ -37,7 +53,7 @@ ggplot(Activity.daysteps, aes(x=daysteps))+
   theme_solarized_2(light=FALSE)
 ```
 
-![](PA1_template_files/figure-html/second-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -75,7 +91,7 @@ ggplot(data=Activity.Intervalsteps, aes(x=as.numeric(interval), y=Intervalsteps)
   theme_solarized_2(light=FALSE)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -141,7 +157,7 @@ ggplot(Activity_NAS.daysteps, aes(x=daysteps))+
   theme_solarized_2(light=FALSE)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
@@ -170,7 +186,7 @@ ggplot(Activity_NAS.Intervalsteps, aes(x=as.numeric(interval), y=Intervalsteps, 
   theme_solarized_2(light=FALSE)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 
 

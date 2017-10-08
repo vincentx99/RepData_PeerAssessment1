@@ -120,6 +120,20 @@ $(document).ready(function () {
 </div>
 
 
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+library(RColorBrewer)
+library(reshape2)
+library(kableExtra)
+library(xtable)
+library(pander)
+panderOptions('table.style', 'rmarkdown')
+library(knitr)
+library(rmarkdown)
+library(magrittr)</code></pre>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
 <pre class="r"><code>unzip(&quot;activity.zip&quot;)

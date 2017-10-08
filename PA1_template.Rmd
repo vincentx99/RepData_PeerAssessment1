@@ -6,7 +6,7 @@
 
 ---
 
-```{r setup, include=FALSE}
+```{r setup}
 knitr::opts_chunk$set(echo = TRUE)
 library(lubridate)
 library(dplyr)
@@ -25,7 +25,7 @@ library(magrittr)
 
 ## Loading and preprocessing the data
 
-```{r datareading}
+```{r}
 
 unzip("activity.zip")
 
@@ -42,7 +42,7 @@ Activity$date_interval<-as.POSIXct(paste(Activity$date, Activity$interval), form
 
 1. Calculate the total number of steps taken per day.
 
-```{r first, echo=TRUE}
+```{r}
 
 Activity.daysteps<-Activity%>%filter(!is.na(steps))%>%
 group_by(date=lubridate::date(date_interval))%>%
@@ -52,7 +52,7 @@ group_by(date=lubridate::date(date_interval))%>%
 
 2. If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day.
 
-```{r second}
+```{r}
 ggplot(Activity.daysteps, aes(x=daysteps))+
   geom_histogram(aes(fill=..count..),binwidth=2500, alpha=.75)+
   scale_fill_gradient("Count", low = "skyblue2", high = "slateblue4")+
