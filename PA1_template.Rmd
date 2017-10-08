@@ -71,7 +71,7 @@ Activity.daysteps.summary<-Activity.daysteps%>%
 Activity.daysteps.summary<-as.data.frame(Activity.daysteps.summary)
 
 
-pandoc.table(Activity.daysteps.summary, caption="Summary of daily steps taken.", style = 'rmarkdown', split.tables = Inf)
+pander(Activity.daysteps.summary, caption="Summary of daily steps taken.")
 
 ```
 
@@ -99,7 +99,7 @@ pander(Activity.Intervalsteps.summary,caption = "Interval for maximum steps.")
 ## Imputing missing values
 
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
-```{r third}
+```{r}
 
 Activity_NAS<-Activity
 
@@ -147,7 +147,7 @@ ggplot(Activity_NAS.daysteps, aes(x=daysteps))+
 
 1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
-```{r fourth}
+```{r}
 
 Activity_NAS<-Activity_NAS%>%mutate("wday"=case_when(
                                 weekdays(date_interval) == "Saturday" | weekdays(date_interval) == "Sunday" ~ "Weekend",

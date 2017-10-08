@@ -50,18 +50,16 @@ Activity.daysteps.summary<-Activity.daysteps%>%
 Activity.daysteps.summary<-as.data.frame(Activity.daysteps.summary)
 
 
-pandoc.table(Activity.daysteps.summary, caption="Summary of daily steps taken.", style = 'rmarkdown', split.tables = Inf)
+pander(Activity.daysteps.summary, caption="Summary of daily steps taken.")
 ```
 
-```
-## 
-## 
-## | mean  | median |
-## |:-----:|:------:|
-## | 10766 | 10765  |
-## 
-## Table: Summary of daily steps taken.
-```
+
+
+| mean  | median |
+|:-----:|:------:|
+| 10766 | 10765  |
+
+Table: Summary of daily steps taken.
 
 ## What is the average daily activity pattern?
 
@@ -143,7 +141,7 @@ ggplot(Activity_NAS.daysteps, aes(x=daysteps))+
   theme_solarized_2(light=FALSE)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
@@ -172,7 +170,7 @@ ggplot(Activity_NAS.Intervalsteps, aes(x=as.numeric(interval), y=Intervalsteps, 
   theme_solarized_2(light=FALSE)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 
 

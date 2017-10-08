@@ -157,14 +157,22 @@ group_by(date=lubridate::date(date_interval))%&gt;%
 Activity.daysteps.summary&lt;-as.data.frame(Activity.daysteps.summary)
 
 
-pandoc.table(Activity.daysteps.summary, caption=&quot;Summary of daily steps taken.&quot;, style = 'rmarkdown', split.tables = Inf)</code></pre>
-<pre><code>## 
-## 
-## | mean  | median |
-## |:-----:|:------:|
-## | 10766 | 10765  |
-## 
-## Table: Summary of daily steps taken.</code></pre>
+pander(Activity.daysteps.summary, caption=&quot;Summary of daily steps taken.&quot;)</code></pre>
+<table>
+<caption>Summary of daily steps taken.</caption>
+<thead>
+<tr class="header">
+<th align="center">mean</th>
+<th align="center">median</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">10766</td>
+<td align="center">10765</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
 <h2>What is the average daily activity pattern?</h2>
