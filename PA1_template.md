@@ -3,14 +3,14 @@
 
 ```r
 knitr::opts_chunk$set(echo = TRUE)
-library(lubridate)
+#library(lubridate)
 library(dplyr)
 library(ggplot2)
 library(ggthemes)
-library(RColorBrewer)
+#library(RColorBrewer)
 library(reshape2)
-library(kableExtra)
-library(xtable)
+#library(kableExtra)
+#library(xtable)
 library(pander)
 panderOptions('table.style', 'rmarkdown')
 library(knitr)
